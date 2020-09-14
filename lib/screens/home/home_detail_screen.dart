@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate/constants/assets.dart';
+import 'package:flutter_boilerplate/cubits/post/post_cubit.dart';
+import 'package:flutter_boilerplate/repositories/post/post_repository.dart';
 
 const String _loremIpsumParagraph =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod '
@@ -40,7 +43,7 @@ class HomeDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Details page')
+          title: const Text('Details page')
       ),
       body: ListView(
         children: <Widget>[
@@ -59,7 +62,11 @@ class HomeDetailScreen extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Title',
-                  style: Theme.of(context).textTheme.headline5.copyWith(
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .headline5
+                      .copyWith(
                     color: Colors.black54,
                     fontSize: 30.0,
                   ),
@@ -67,12 +74,11 @@ class HomeDetailScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 Text(
                   _loremIpsumParagraph,
-                  style: Theme.of(context).textTheme.bodyText2.copyWith(
-                    color: Colors.black54,
-                    height: 1.5,
-                    fontSize: 16.0,
-                  ),
-                ),
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .bodyText1,
+                )
               ],
             ),
           ),
