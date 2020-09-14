@@ -4,13 +4,88 @@ A boilerplate project created in Flutter
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run the flutter app with the following arguments:
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter run --dart-define=BASE_URL=BASE_URL_VALUE --dart-define=STORAGE_URL=STORAGE_URL_VALUE
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+More about command argument for environment config
+[Here](https://itnext.io/flutter-1-17-no-more-flavors-no-more-ios-schemas-command-argument-that-solves-everything-8b145ed4285d)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Boilerplate Features:
+- Home
+- Dio
+- BLoC
+- Secure Storage
+- Validation
+- Animations
+
+## Folder Structure
+```
+flutter_boilerplate
+├── android
+├── assets
+│   ├── fonts
+│   │   ├── lato
+│   │   │   ├── Lato-Bold.ttf
+│   │   │   ├── Lato-Italic.ttf
+│   │   │   └── Lato-Regular.ttf
+│   │   ├── lora
+│   │   │   ├── Lora-Bold.ttf
+│   │   │   ├── Lora-Italic.ttf
+│   │   │   └── Lora-Regular.ttf
+│   │   └── roboto
+│   │       ├── Roboto-Bold.ttf
+│   │       ├── Roboto-Italic.ttf
+│   │       └── Roboto-Regular.ttf
+│   ├── icons  
+│   ├── images 
+│   │   ├── placeholder_avatar.png
+│   │   └── placeholder_image.png
+│   └── lang
+├── ios  
+├── lib
+│   ├── bloc
+│   ├── config
+│   │   ├── network
+│   │   │   ├── dio_client.dart
+│   │   │   └── network_exception.dart
+│   │   └── environment_config.dart
+│   ├── constants
+│   │   ├── assets.dart
+│   │   ├── dimens.dart
+│   │   ├── endpoints.dart
+│   │   ├── fonts.dart
+│   │   └── strings.dart
+│   ├── cubits
+│   │   ├── post
+│   │   │   ├── post_cubit.dart
+│   │   │   └── post_state.dart
+│   │   └── user
+│   │       ├── user_cubit.dart
+│   │       └── user_state.dart
+│   ├── models
+│   │   ├── post
+│   │   │   └── post_model.dart
+│   │   └── user
+│   │       └── user_model.dart
+│   ├── repositories
+│   │   ├── post
+│   │   │   └── post_repository.dart
+│   │   └── user
+│   │       └── user_repository.dart
+│   ├── screens
+│   │   ├── home
+│   │   │   ├── home_screen.dart
+│   │   │   └── home_detail_screen.dart
+│   │   └── user
+│   │       └── user_list_screen.dart
+│   ├── utils
+│   │   ├── dio_error_util.dart
+│   │   └── string_util.dart
+│   ├── widgets
+│   │   └── open_container_wrapper.dart
+│   └── main.dart
+└── test
+```
